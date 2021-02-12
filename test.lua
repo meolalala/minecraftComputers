@@ -18,4 +18,6 @@ function doSomething()
     print("{I'm sleepy.} :mewdoze:")
 end
 
+doSomething()
+
 print("please don't hurt me")

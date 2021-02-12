@@ -1,10 +1,6 @@
 local robot = require "robot"
 local comp = require "component"
-local sides = require "sides"
 local tb = comp.tractor_beam
-local rs = comp.redstone
-
-local out_side = sides.bottom
 
 function doSomething()
     print("doing something!! please be patient!!")
@@ -21,3 +17,5 @@ function doSomething()
     robot.down()
     print("{I'm sleepy.} :mewdoze:")
 end
+
+print("please don't hurt me")

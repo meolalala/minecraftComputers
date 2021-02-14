@@ -78,3 +78,5 @@ function placeWither()
     moveUp()
     turnAround()
 end
+
+placeWither()

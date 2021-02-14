@@ -1,26 +1,26 @@
 local robot = require "robot"
 
+function moveForward(times)
+    for i = 1, times do
+        robot.forward()
+    end
+end
+
+function moveBack(times)
+    for i = 1, times do
+        robot.back()
+    end
+end
+
 function moveUp(times)
     for i = 1, times do
-        robot.moveUp() 
+        robot.up() 
     end
 end
 
 function moveDown(times)
     for i = 1, times do
-        robot.moveDown() 
-    end
-end
-
-function moveLeft(times)
-    for i = 1, times do
-        robot.moveLeft() 
-    end
-end
-
-function moveRight(times)
-    for i = 1, times do
-        robot.moveRight() 
+        robot.down() 
     end
 end
 
@@ -43,5 +43,38 @@ function swing(times)
 end
 
 function placeWither()
-
+    print("placing witherchan")
+    moveForward(5)
+    robot.select(1)
+    robot.place()
+    moveUp()
+    robot.place()
+    turnLeft()
+    moveForward()
+    turnRight()
+    robot.place()
+    turnRight()
+    moveForward(2)
+    turnLeft()
+    robot.place()
+    robot.select(2)
+    moveUp()
+    robot.place()
+    turnLeft()
+    moveForward()
+    turnRight()
+    robot.place()
+    turnLeft()
+    moveForward()
+    turnRight()
+    robot.place()
+    robot.turnAround()
+    moveDown(2)
+    moveForward()
+    turnLeft()
+    moveForward()
+    turnRight()
+    moveForward(1)
+    moveUp()
+    turnAround()
 end
